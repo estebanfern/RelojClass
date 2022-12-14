@@ -11,7 +11,7 @@ public class Reloj {
     }
     public Reloj(int hor, int min, int sec){
         if (hor > 23 || min > 59 || sec > 59 || hor < 0 || min < 0 || sec < 0){
-            throw new IllegalArgumentException("Argumentos ilegales");
+            throw new IllegalArgumentException ("Argumentos ilegales");
         }
         this.horas = hor;
         this.minutos = min;
@@ -106,6 +106,12 @@ public class Reloj {
 
     public Reloj restaReloj(Reloj rel) {
         return new Reloj((int) Math.abs(this.aSegundos() - rel.aSegundos()));
+    }
+
+    public void horaVerano(){
+        this.horas++;
+        if(this.horas>23)
+            this.horas = 0;
     }
 
 }

@@ -19,6 +19,8 @@ public class RelojDemo {
         System.out.printf("%36s\n%29s\n", "------------------------------------", "Diferencia entre horas");
         System.out.println(new Reloj(19, 45, 56) + " - " + relo + " = " + relo.restaReloj(new Reloj(19, 45, 56)));
         System.out.printf("%36s\n", "------------------------------------");
+        relo.horaVerano()
+        System.out.println(relo);
 
         sc.close();
     }
